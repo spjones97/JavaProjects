@@ -1,10 +1,5 @@
 package tictactoe;
 
-
-import connectfour.Spot;
-import connectfour.SpotBoard;
-import connectfour.SpotListener;
-
 import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Graphics;
@@ -35,14 +30,14 @@ public class JSpot extends JPanel implements MouseListener, Spot {
 
 	private boolean _is_empty;
 	private boolean _is_highlighted;
-	private connectfour.SpotBoard _board;
+	private SpotBoard _board;
 	private int _x;
 	private int _y;
 
-	private List<connectfour.SpotListener> _spot_listeners;
+	private List<SpotListener> _spot_listeners;
 
 	public JSpot(Color background, Color spot_color, Color highlight,
-				 connectfour.SpotBoard board, int x, int y) {
+				 JSpotBoard board, int x, int y) {
 
 		// Background color inherited from JPanel
 		setBackground(background);
@@ -55,7 +50,7 @@ public class JSpot extends JPanel implements MouseListener, Spot {
 		_x = x;
 		_y = y;
 
-		_spot_listeners = new ArrayList<connectfour.SpotListener>();
+		_spot_listeners = new ArrayList<SpotListener>();
 
 		addMouseListener(this);
 	}
@@ -147,12 +142,12 @@ public class JSpot extends JPanel implements MouseListener, Spot {
 	// Spot listener (de)registration methods.
 
 	@Override
-	public void addSpotListener(connectfour.SpotListener l) {
+	public void addSpotListener(SpotListener l) {
 		_spot_listeners.add(l);
 	}
 
 	@Override
-	public void removeSpotListener(connectfour.SpotListener l) {
+	public void removeSpotListener(SpotListener l) {
 		_spot_listeners.remove(l);
 	}
 
@@ -182,7 +177,7 @@ public class JSpot extends JPanel implements MouseListener, Spot {
 
 	@Override
 	public void mouseClicked(MouseEvent e) {
-		for (connectfour.SpotListener s : _spot_listeners) {
+		for (SpotListener s : _spot_listeners) {
 			s.spotClicked(this);
 		}
 	}
@@ -201,7 +196,7 @@ public class JSpot extends JPanel implements MouseListener, Spot {
 
 	@Override
 	public void mouseEntered(MouseEvent e) {
-		for (connectfour.SpotListener s : _spot_listeners) {
+		for (SpotListener s : _spot_listeners) {
 			s.spotEntered(this);
 		}
 	}

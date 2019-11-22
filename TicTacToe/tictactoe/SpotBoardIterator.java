@@ -1,15 +1,11 @@
 package tictactoe;
 
-
-import connectfour.Spot;
-import connectfour.SpotBoard;
-
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-public class SpotBoardIterator implements Iterator<connectfour.Spot> {
+public class SpotBoardIterator implements Iterator<Spot> {
 
-	private connectfour.SpotBoard _board;
+	private SpotBoard _board;
 	int _x;
 	int _y;
 	
@@ -25,7 +21,7 @@ public class SpotBoardIterator implements Iterator<connectfour.Spot> {
 	}
 
 	@Override
-	public connectfour.Spot next() {
+	public Spot next() {
 		if (!hasNext()) {
 			throw new NoSuchElementException();
 		}

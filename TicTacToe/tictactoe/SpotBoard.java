@@ -1,9 +1,5 @@
 package tictactoe;
 
-
-import connectfour.Spot;
-import connectfour.SpotListener;
-
 import java.util.Iterator;
 
 /* 
@@ -29,15 +25,15 @@ import java.util.Iterator;
  */
 
 
-public interface SpotBoard extends Iterable<connectfour.Spot> {
+public interface SpotBoard extends Iterable<Spot> {
 
 	int getSpotWidth();
  
 	int getSpotHeight();
 
-	connectfour.Spot getSpotAt(int x, int y);
+	Spot getSpotAt(int x, int y);
 
-	void addSpotListener(connectfour.SpotListener spot_listener);
+	void addSpotListener(SpotListener spot_listener);
 
 	void removeSpotListener(SpotListener spot_listener);
 

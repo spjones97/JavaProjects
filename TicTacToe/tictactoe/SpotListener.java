@@ -1,6 +1,5 @@
 package tictactoe;
 
-
 /*
  * SpotListener
  * 
@@ -8,11 +7,9 @@ package tictactoe;
  * 
  */
 
-import connectfour.Spot;
-
 public interface SpotListener {
 
-	void spotClicked(connectfour.Spot spot);
-	void spotEntered(connectfour.Spot spot);
+	void spotClicked(Spot spot);
+	void spotEntered(Spot spot);
 	void spotExited(Spot spot);
 }

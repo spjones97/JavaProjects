@@ -1,9 +1,5 @@
 package tictactoe;
 
-import connectfour.JSpotBoard;
-import connectfour.Spot;
-import connectfour.SpotListener;
-
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
@@ -15,7 +11,7 @@ public class TicTacToeWidget extends JPanel implements ActionListener, SpotListe
 
     private enum Player {BLACK, WHITE};
 
-    private connectfour.JSpotBoard _board;      // playing area
+    private JSpotBoard _board;      // playing area
     private JLabel _message;        // label for messages
     private boolean _gameWon;      // indicates if game has been won already
     private Player _nextToPLay;   // identifies who has the next turn
@@ -52,7 +48,7 @@ public class TicTacToeWidget extends JPanel implements ActionListener, SpotListe
 
     private void resetGame() {
         // Clear all spots on the board
-        for (connectfour.Spot s : _board) {
+        for (Spot s : _board) {
             s.clearSpot();
             s.setSpotColor(new Color(0.8f, 0.8f, 0.8f));
         }
@@ -72,7 +68,7 @@ public class TicTacToeWidget extends JPanel implements ActionListener, SpotListe
     }
 
     @Override
-    public void spotClicked(connectfour.Spot spot) {
+    public void spotClicked(Spot spot) {
         // If game already won, do nothing
         if (_gameWon) {
             return;
@@ -148,7 +144,7 @@ public class TicTacToeWidget extends JPanel implements ActionListener, SpotListe
     }
 
     @Override
-    public void spotEntered(connectfour.Spot spot) {
+    public void spotEntered(Spot spot) {
         // Highlight spot if game is not over
         if (spot.isEmpty() && !_gameWon) {
             spot.highlightSpot();

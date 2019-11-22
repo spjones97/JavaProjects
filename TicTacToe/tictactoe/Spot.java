@@ -1,9 +1,5 @@
 package tictactoe;
 
-
-import connectfour.SpotBoard;
-import connectfour.SpotListener;
-
 import java.awt.Color;
 
 /*
@@ -73,7 +69,7 @@ public interface Spot {
 	void setHighlight(Color c);
 	Color getHighlight();
 
-	void addSpotListener(connectfour.SpotListener l);
+	void addSpotListener(SpotListener l);
 	void removeSpotListener(SpotListener l);
 
 	default String getCoordString() {
