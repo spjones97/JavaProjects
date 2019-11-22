@@ -40,13 +40,13 @@ Rules:
 * Take turns choosing spots on the board until one of the players reach three in a row.
 * If the board fills up before that happens, the result of the game is a draw.
 * When prompted for a section on the board assume the board locations are as follows:
-----------------------------
+
 | (1, 1) | (1, 2) | (1, 3) | 
 ----------------------------
 | (2, 1) | (2, 2) | (2, 3) | 
 ----------------------------
 | (3, 1) | (3, 2) | (3, 3) | 
-----------------------------
+
 * An example of an input would be "2 2" or " 1 3"
 
 How to access the game:
