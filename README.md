@@ -1,6 +1,3 @@
-# JavaProjects
-All my Java project files
-
 # Welcome to my Java Projects
 This repository consists of all the projects I have created with the programming language Java. Throughout my work with java, I have learned to create games, calculators, web parsers, etc. I have organized my projects into separate files and below will explain each project summary, how to access the project, and instructions on how to use them. Thank you for checking out my repository! Let me know if you have any feedback.
 
