@@ -50,3 +50,16 @@ How to access the game:
 1. Clone the repository if you haven't already.
 2. Open any comman-line application of your choosing and locate the file location `JavaProjects/out/artifacts/ttt_jar/`
 3. Run the command `java -jar ttt.jar`
+
+## Othello
+This game is a user interface program that is intended for two players. The rules are a little more complex than the ones previously, but can be found here: https://www.ultraboardgames.com/othello/game-rules.php
+
+Rules:
+* Take turns choosing spots on the board until no more moves can be made.
+* If both players take up the same amount of space, the result of the game is a draw.
+* Feel free to restart the game at any point by clicking the "Restart" button on the bottom right corner.
+
+How to access game:
+1. Clone the repository if you haven't already.
+2. Go to the file location `JavaProjects/out/artifacts/othello_jar/`
+3. Double click on the .jar file and enjoy!
