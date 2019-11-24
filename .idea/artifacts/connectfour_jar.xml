@@ -2,10 +2,10 @@
   <artifact type="jar" name="connectfour:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/connectfour_jar</output-path>
     <root id="archive" name="connectfour.jar">
-      <element id="module-output" name="JavaProjects" />
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/ConnectFour/connectfour/META-INF/MANIFEST.MF" />
       </element>
+      <element id="module-output" name="JavaProjects" />
     </root>
   </artifact>
 </component>
